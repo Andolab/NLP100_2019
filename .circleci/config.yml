@@ -51,7 +51,7 @@ jobs:
           paths:
             - .env
             - .tox
-            key: requirements-{{ checksum "requirements.txt" }}
+          key: requirements-{{ checksum "requirements.txt" }}
 
 workflows:
   version: 2
