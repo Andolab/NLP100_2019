@@ -1,0 +1,13 @@
+six
+mecab-python3
+numpy
+matplotlib
+pydot_ng
+stemming
+nltk
+redis
+pymongo
+flask
+scipy
+scikit-learn
+gensim
