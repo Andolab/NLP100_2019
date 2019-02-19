@@ -1,6 +1,6 @@
 From circleci/python:3.7
 
-RUN sudo python -m venv .env && . .env/bin/activate && sudo pip install -U pip \
+RUN sudo pip install -U pip \
     && sudo apt install -y swig mecab libmecab-dev mecab-ipadic-utf8 \
     && sudo curl -L -o CRF++-0.58.tar.gz 'https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7QVR6VXJ5dWExSTQ' \
     && sudo tar zxf CRF++-0.58.tar.gz \
