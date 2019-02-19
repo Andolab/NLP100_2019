@@ -5,6 +5,7 @@ matplotlib
 pydot_ng
 stemming
 nltk
+plyvel
 redis
 pymongo
 flask
