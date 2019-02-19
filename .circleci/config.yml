@@ -1,6 +1,7 @@
 version: 2
 jobs:
   test:
+    working_directory: /
     docker:
       - image: rikeda71/nlp100_ci:0.1
     steps:
