@@ -8,7 +8,7 @@
 
 各章ごとに初めて取り組むときは以下を行う
 1. `git checkout -b lastname-chap@` (ex. `git checkout -b ikeda-chap1`)
-2. `git commit -m"[WIP] Chap@ by lastname" --allow-empty`(ex. `git commit -m"[WIP] Chap1 by ikeda" --allow-empty`)
+2. `git commit -m"[WIP] Chap@ by lastname" --allow-empty`(ex. `[WIP] Chap1 by ikeda`)
 3. `git push -u origin lastname-chap@`
 4. githubのリポジトリ上に1で作成したブランチができているので，そのブランチでPullRequestを立てる
     - PullRequestの表題は2のcommitメッセージがデフォルトで入っていると思うのでそのままでOK
@@ -35,7 +35,8 @@
 
 ## コーディングについて
 
-基本的に，python3 (3.6以上を推奨)を使用してください．
+python3 (3.6以上を推奨)を使用してください．
+
 他のプログラミング言語で解きたい場合は，個人的に解いてください
 
 ## 注意事項
