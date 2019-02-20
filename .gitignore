@@ -102,3 +102,15 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# our settings
+*.txt
+!./requirements.txt
+*.png
+*.json
+*.xml
+*.csv
+*.tsv
+Pipfile
+Pipfile.lock
+!.gitkeep

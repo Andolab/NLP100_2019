@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: rikeda71/nlp100_ci:0.2
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - requirements-{{ checksum "requirements.txt" }}
+      - run:
+          name: Run tox
+          command: |
+            sudo pip install -U pip tox flake8
+            sudo pip install -r requirements.txt
+            tox
+      - save_cache:
+          paths:
+            - /home/circleci/.cache/
+            - .tox
+          key: requirements-{{ checksum "requirements.txt" }}
+
+workflows:
+  version: 2
+  codetest:
+    jobs:
+      - test
