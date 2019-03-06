@@ -2,7 +2,7 @@ import random
 
 
 def Typoglycemia(words):
-    words = list(words.split())
+    words = words.split()
 
     for k in range(len(words)):
         # 四文字以上の単語をシャッフル
