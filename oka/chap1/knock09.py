@@ -14,9 +14,9 @@ def typoglycemia(string):
 sample = "I couldn't believe that I could actually \
     understand what I was reading : the phenomenal \
     power of the human mind ."
-word = sample.split()
-for i in range(len(word)):
-    if len(word[i]) > 4:
-        print(typoglycemia(word[i]), end=" ")
+words = sample.split()
+for i in range(len(words)):
+    if len(words[i]) > 4:
+        print(typoglycemia(words[i]), end=" ")
     else:
-        print(word[i], end=" ")
+        print(words[i], end=" ")
