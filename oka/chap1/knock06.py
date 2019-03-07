@@ -1,6 +1,6 @@
 def ngram(string, number, group):
-    for i in range(len(string)-1):
-        group.add(string[i] + string[i+1])
+    for i in range(len(string)-number+1):
+        group.add(string[i:i+number])
 
 
 # groupの中にstringが含まれているかの判定
