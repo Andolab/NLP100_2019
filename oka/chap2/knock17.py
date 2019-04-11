@@ -1,5 +1,5 @@
 # 1列目の異なり
-def diference(out):
+def difference(out):
     first = []
     for i in range(len(out)):
         if out[i][0] in first:
@@ -13,10 +13,10 @@ def diference(out):
 def reading(path):
     with open(path, mode="r", encoding="utf-8") as f:
         s = f.readlines()
-        elements = [elem.split() for elem in s]
+    elements = [elem.split() for elem in s]
     return elements
 
 
 path = "C:\\Users\\16t215\\Desktop\\hightemp.txt"
 out = reading(path)
-diference(out)
+difference(out)

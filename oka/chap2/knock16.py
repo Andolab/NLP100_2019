@@ -6,15 +6,17 @@ def filesplit(lines, number):
         limit += 1
     for i in range(number):
         filenumber = int(i)
-        filename = ploto + "split" + str(filenumber) + ".txt"
+        filename = "{0}split{1}.txt".format(ploto, i)
+        # filename = ploto + "split" + str(filenumber) + ".txt"
         writing(filename, lines, filenumber*limit, limit)
 
 
 # N分割ファイル作り
 def writing(path, lines, filenumber, limit):
     with open(path, mode="w", encoding="utf-8") as f:
-        for i in range(limit):
-            f.write(lines[filenumber + i] + "\n")
+        f.write('\n'.join([lines[filenumber + i] for i in range(limit)]))
+        # for i in range(limit):
+        #    f.write(lines[filenumber + i] + "\n")
 
 
 # ファイルの読み込み

@@ -1,5 +1,6 @@
-from itertools import groupby
+# from itertools import groupby
 from collections import Counter
+
 
 # 頻度順
 def frequency(out):
@@ -13,7 +14,7 @@ def frequency(out):
 def reading(path):
     with open(path, mode="r", encoding="utf-8") as f:
         s = f.readlines()
-        elements = [elem.split()[0] for elem in s]
+    elements = [elem.split()[0] for elem in s]
     return elements
 
 
