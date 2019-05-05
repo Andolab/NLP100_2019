@@ -1,7 +1,6 @@
 import json
 import gzip
 import re
-import requests
 # import codecs
 # from collections import OrderedDict
 # import pprint
@@ -31,21 +30,4 @@ text_list2 = re.findall(r"\n\|(.*?) = (.*?)(?=\n\||\n}}\n)", text_list[0], re.DO
 text_dictionary = {}
 for dictionary in text_list2:
     text_dictionary[dictionary[0]] = remove_markup(dictionary[1])
-
-# 画像抜き出し
-image_name = text_dictionary["国旗画像"].strip()
-wiki_url = "http://en.wikipedia.org/w/api.php?"
-# リクエストのパラメータ定義
-params = {
-    "action": "query",
-    "titles": "File:{}".format(image_name),
-    "prop": "imageinfo",
-    "iiprop": "url",
-    "format": "json"
-}
-
-# リクエスト実行
-data = requests.get(wiki_url, params=params).json()
-
-# 画像URLを取得
-print(list(data["query"]["pages"].values())[0]["imageinfo"][0]["url"])
+print(text_dictionary)
