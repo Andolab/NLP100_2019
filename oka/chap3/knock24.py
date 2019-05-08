@@ -15,6 +15,6 @@ with gzip.open(path, mode="rt", encoding="utf-8") as f:
             break
 text_list = text.split("\n")
 for lines in text_list:
-    match = re.match(r"ファイル:(?P<content>(.+?))\|", lines)
+    match = re.search(r"(ファイル|File):(?P<content>(.+?))\|", lines)
     if match:
         print(match.group("content"))
