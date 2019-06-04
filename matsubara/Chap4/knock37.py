@@ -1,6 +1,6 @@
 import knock30
 import collections
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 morphs = knock30.data_shape()
