@@ -8,12 +8,12 @@ def set_rank(data: list):
     num = 1
     rank = []
     for info, k in zip(data, range(len(data))):
-        try:
-            if info[1] is not data[k+1][1]:
-                num = k+1
-        except:
-            # 最終要素のとき
+        # 最終要素のとき
+        if k > len(data)-2:
             if info[1] is not data[k-1][1]:
+                num = k+1
+        else:
+            if info[1] is not data[k+1][1]:
                 num = k+1
         rank.append(num)
     return rank
