@@ -12,6 +12,6 @@ def get_eng_article(pattern: str):
 
 
 if __name__ == "__main__":
-    pattern = "(?<=\|)(.*?)\s=\s(.*?)(?=\\n\||\\n}}\\n)"
+    pattern = r"(?<=\|)(.*?)\s=\s(.*?)(?=\\n\||\\n}}\\n)"
     basic = get_eng_article(pattern)
     print(dict(basic))
