@@ -1,7 +1,7 @@
 import knock25
 import re
 
-pattern = "(?<=\|)(.*?)\s=\s(.*?)(?=\\n\||\\n}}\\n)"
+pattern = r"(?<=\|)(.*?)\s=\s(.*?)(?=\\n\||\\n}}\\n)"
 basic = knock25.get_eng_article(pattern)
 new_dict = {}
 for info in basic:
