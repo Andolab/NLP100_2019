@@ -4,15 +4,15 @@ import requests
 
 endpoint = "https://en.wikipedia.org/w/api.php"
 
-pattern1 = "(?<=\|)(.*?)\s=\s(.*?)(?=\\n\||\\n}}\\n)"
+pattern1 = r"(?<=\|)(.*?)\s=\s(.*?)(?=\\n\||\\n}}\\n)"
 basic = knock25.get_eng_article(pattern1)
 new_dict = {}
 for info in basic:
     info = list(info)
     info[1] = re.sub("'|<.*>|{.*}", "", info[1])
-    pattern2 = "\[+\W.*?\]+"
+    pattern2 = r"\[+\W.*?\]+"
     if re.search(pattern2, info[1]):
-        info[1] = re.sub("\[|\]", "", info[1])
+        info[1] = re.sub(r"\[|\]", "", info[1])
     new_dict[info[0]] = info[1]
 flag_img = new_dict["国旗画像"]
 
