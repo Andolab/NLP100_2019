@@ -5,10 +5,7 @@ def input_stopword():
 
 
 def check_stword(word: str, stop_list: list):
-    if word in stop_list:
-        return True
-    else:
-        return False
+    return word in stop_list
 
 
 def remove_stopword(word_list: list, stop_word: list):
