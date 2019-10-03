@@ -2,7 +2,6 @@ import re
 import nltk
 from nltk.stem.porter import PorterStemmer as PS
 import knock71
-import pdb
 
 
 def input_file(filepath: str):
@@ -21,7 +20,7 @@ def stemming(words_list):
 
 
 def remove_stopword_and_stemming(textset: str, stop_word: list):
-    text = re.sub("[^a-z^\s]", "", textset)
+    text = re.sub(r"[^a-z^\s]", "", textset)
     words = str.lower(text).split()
     stm_word = stemming(words)
     stm_stop_words = knock71.remove_stopword(stm_word, stop_word)
