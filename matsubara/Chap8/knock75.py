@@ -4,7 +4,6 @@ import knock72
 import numpy as np
 import math
 from sklearn.model_selection import train_test_split
-import pdb
 
 
 def read_file(filepath: str):
@@ -57,7 +56,6 @@ def my_LogisticRegression(learn_data: list, labels: list):
     theta = 1e-3
     N = len(learn_data[0])
     W_new = np.zeros(N)
-    W_old = np.ones(N)
     loss = N
     while loss > theta and time < 200:
         W_old = W_new

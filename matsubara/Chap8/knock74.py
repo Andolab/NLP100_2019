@@ -56,7 +56,6 @@ def my_LogisticRegression(learn_data: list, labels: list):
     theta = 1e-3
     N = len(learn_data[0])
     W_new = np.zeros(N)
-    W_old = np.ones(N)
     loss = N
     while loss > theta and time < 200:
         W_old = W_new
