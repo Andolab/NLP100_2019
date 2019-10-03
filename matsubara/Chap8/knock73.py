@@ -47,7 +47,7 @@ def make_vector_and_label(sent_lines: list, adj_list: list, stop_word: list):
     return vector, labels
 
 
-def discriminant_function(y: int, W: list, f: list):
+def discriminant_function(y: int, W: np.ndarray, f: np.ndarray):
     return 1 / (1 + np.exp(-y * np.dot(W, f)))
 
 
@@ -56,7 +56,6 @@ def my_LogisticRegression(learn_data: list, labels: list):
     theta = 1e-3
     N = len(learn_data[0])
     W_new = np.zeros(N)
-    W_old = np.ones(N)
     loss = N
     while loss > theta and time < 200:
         W_old = W_new
@@ -78,6 +77,7 @@ def extract_corpus(sentpath: str, stop_word: list):
     else:
         adj_list = knock72.adj_corpus(sentpath, stop_word)
         write_file(adjpath, adj_list)
+    return adj_list
 
 
 def extract_learning_data(sentpath: str, adj_list: list, stopword: list):
