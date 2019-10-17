@@ -22,7 +22,8 @@ def random_sentence(word):
 
 
 if __name__ == '__main__':
-    sentence = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
+    sentence = "I couldn't believe that I could actually understand what I was reading \
+    : the phenomenal power of the human mind ."
     sentenceList = sentence.split()
     results = ""
     for i in sentenceList:
